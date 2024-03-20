@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo01</title>
+</head>
+<body>
+<h2><a href="/lesson56/demo001?action=normal">普通的GET请求</a></h2>
+<p>GET请求携带参数是通过在url后面追加的方式：?参数名=值&参数名=值</p>
+<p>如果后台获取的参数，前端没有传此参数，那后台获取的值为空null</p>
+<p>如果后台获取的参数，前端传了此参数但是没有赋值，那后台获取的值为空字符串""</p>
+<h2><a href="/lesson56/demo001?username=tom&age=20&phone">普通的GET请求,携带一个参数username</a></h2>
+<hr>
+<button onclick="add()">新增</button>
+<button onclick="query()">查询</button>
+<button onclick="del()">删除</button>
+</body>
+<script>
+    function add(){
+        location.href='/lesson56/demo001?action=add'
+    }
+    function query(){
+        location.href='/lesson56/demo001?action=query'
+    }
+    function del(){
+        location.href='/lesson56/demo001?action=del'
+    }
+
+</script>
+</html>
